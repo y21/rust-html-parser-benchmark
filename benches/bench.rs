@@ -21,6 +21,7 @@ where
 
 pub fn criterion_benchmark(cr: &mut Criterion) {
     let files = std::fs::read_dir("data").unwrap();
+    
     for file in files {
         let file = file.unwrap().file_name();
         let file = file.to_str().unwrap();
@@ -38,15 +39,15 @@ pub fn criterion_benchmark(cr: &mut Criterion) {
         });
 
         register_benchmark(cr, &input, &format!("htmlparser-{}", file), || {
-            let _ = html_parser::Dom::parse(&input).unwrap();
+            let _ = html_parser::Dom::parse(&input);
         });
 
         register_benchmark(cr, &input, &format!("rphtml-{}", file), || {
-            let _ = rphtml::parser::Doc::parse(&input, Default::default()).unwrap();
+            let _ = rphtml::parser::Doc::parse(&input, Default::default());
         });
 
         register_benchmark(cr, &input, &format!("rusthtml-{}", file), || {
-            let _ = rusthtml::ElementContent::parse(rusthtml::HtmlTag::parse(&input)).unwrap();
+            let _ = rusthtml::ElementContent::parse(rusthtml::HtmlTag::parse(&input));
         });
 
         register_benchmark(cr, &input, &format!("htmlstream-{}", file), || {
