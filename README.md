@@ -14,82 +14,81 @@ Note: some of these tests are not necessarily good examples of real world data, 
 
 ### wikipedia.html
 ```
-html5ever-wikipedia.html/html5ever-wikipedia.html
-  time:   [5.7573 ms 5.7645 ms 5.7717 ms]
-  thrpt:  [54.192 MiB/s 54.260 MiB/s 54.327 MiB/s]
+html5ever-wikipedia.html/html5ever-wikipedia.html                                                                              
+  time:   [5.7817 ms 5.7900 ms 5.7985 ms]
+  thrpt:  [53.942 MiB/s 54.021 MiB/s 54.098 MiB/s]
   
-tl-wikipedia.html/tl-wikipedia.html
-  time:   [705.44 us 706.45 us 707.47 us]
-  thrpt:  [442.11 MiB/s 442.75 MiB/s 443.38 MiB/s]
+tl-wikipedia.html/tl-wikipedia.html                                                                              
+  time:   [627.03 us 628.23 us 629.48 us]
+  thrpt:  [496.88 MiB/s 497.87 MiB/s 498.83 MiB/s]
   
-htmlparser-wikipedia.html/htmlparser-wikipedia.html
-  time:   [18.131 ms 18.155 ms 18.179 ms]
-  thrpt:  [17.206 MiB/s 17.228 MiB/s 17.251 MiB/s]
+htmlparser-wikipedia.html/htmlparser-wikipedia.html                                                                              
+  time:   [17.738 ms 17.764 ms 17.790 ms]
+  thrpt:  [17.582 MiB/s 17.608 MiB/s 17.634 MiB/s]
   
-rphtml-wikipedia.html/rphtml-wikipedia.html
-  time:   [6.0143 ms 6.0223 ms 6.0305 ms]
-  thrpt:  [51.867 MiB/s 51.937 MiB/s 52.006 MiB/s]
+rphtml-wikipedia.html/rphtml-wikipedia.html                                                                              
+  time:   [6.0053 ms 6.0154 ms 6.0256 ms]
+  thrpt:  [51.909 MiB/s 51.997 MiB/s 52.084 MiB/s]
   
-rusthtml-wikipedia.html/rusthtml-wikipedia.html
-  time:   [3.3389 ms 3.3433 ms 3.3477 ms]
-  thrpt:  [93.433 MiB/s 93.556 MiB/s 93.676 MiB/s]
+rusthtml-wikipedia.html/rusthtml-wikipedia.html                                                                              
+  time:   [3.3830 ms 3.3881 ms 3.3933 ms]
+  thrpt:  [92.175 MiB/s 92.317 MiB/s 92.455 MiB/s]
   
-htmlstream-wikipedia.html/htmlstream-wikipedia.html
-  time:   [2.0316 ms 2.0344 ms 2.0372 ms]
-  thrpt:  [153.54 MiB/s 153.75 MiB/s 153.96 MiB/s]
+htmlstream-wikipedia.html/htmlstream-wikipedia.html                                                                              
+  time:   [2.2752 ms 2.2786 ms 2.2822 ms]
+  thrpt:  [137.05 MiB/s 137.27 MiB/s 137.48 MiB/s]
 ```
 
 ### medium-fragment.html
 ```
-html5ever-medium-fragment.html/html5ever-medium-fragment.html
-  time:   [51.734 us 51.816 us 51.899 us]
-  thrpt:  [83.112 MiB/s 83.246 MiB/s 83.379 MiB/s]
+html5ever-medium-fragment.html/html5ever-medium-fragment.html                                                                               
+  time:   [51.941 us 52.040 us 52.141 us]
+  thrpt:  [82.727 MiB/s 82.888 MiB/s 83.046 MiB/s]
+
+tl-medium-fragment.html/tl-medium-fragment.html                                                                               
+  time:   [7.9936 us 8.0189 us 8.0470 us]
+  thrpt:  [536.03 MiB/s 537.91 MiB/s 539.61 MiB/s]
   
-tl-medium-fragment.html/tl-medium-fragment.html
-  time:   [9.0587 us 9.0719 us 9.0855 us]
-  thrpt:  [474.76 MiB/s 475.48 MiB/s 476.17 MiB/s]
+htmlparser-medium-fragment.html/htmlparser-medium-fragment.html                                                                              
+  time:   [360.03 us 360.72 us 361.42 us]
+  thrpt:  [11.935 MiB/s 11.958 MiB/s 11.981 MiB/s]
   
-htmlparser-medium-fragment.html/htmlparser-medium-fragment.html
-  time:   [355.96 us 356.64 us 357.33 us]
-  thrpt:  [12.072 MiB/s 12.095 MiB/s 12.118 MiB/s]
+rphtml-medium-fragment.html/rphtml-medium-fragment.html                                                                              
+  time:   [90.184 us 90.354 us 90.535 us]
+  thrpt:  [47.644 MiB/s 47.739 MiB/s 47.829 MiB/s]
   
-rphtml-medium-fragment.html/rphtml-medium-fragment.html
-  time:   [89.472 us 89.682 us 89.952 us]
-  thrpt:  [47.953 MiB/s 48.097 MiB/s 48.210 MiB/s]
+rusthtml-medium-fragment.html/rusthtml-medium-fragment.html                                                                               
+  time:   [42.938 us 43.021 us 43.105 us]
+  thrpt:  [100.07 MiB/s 100.26 MiB/s 100.46 MiB/s]
   
-rusthtml-medium-fragment.html/rusthtml-medium-fragment.html
-  time:   [42.113 us 42.183 us 42.254 us]
-  thrpt:  [102.08 MiB/s 102.26 MiB/s 102.43 MiB/s]
-  
-htmlstream-medium-fragment.html/htmlstream-medium-fragment.html
-  time:   [28.172 us 28.260 us 28.373 us]
-  thrpt:  [152.03 MiB/s 152.64 MiB/s 153.11 MiB/s]
+htmlstream-medium-fragment.html/htmlstream-medium-fragment.html                                                                               
+  time:   [31.329 us 31.393 us 31.460 us]
+  thrpt:  [137.11 MiB/s 137.40 MiB/s 137.68 MiB/s]
 ```
 
 ### lipsum.html
 ```
-html5ever-lipsum.html/html5ever-lipsum.html
-  time:   [27.565 us 27.579 us 27.593 us]
-  thrpt:  [437.73 MiB/s 437.95 MiB/s 438.17 MiB/s]
+html5ever-lipsum.html/html5ever-lipsum.html                                                                               
+  time:   [24.222 us 24.255 us 24.288 us]
+  thrpt:  [497.30 MiB/s 497.98 MiB/s 498.65 MiB/s]
   
-tl-lipsum.html/tl-lipsum.html
-  time:   [5.8804 us 5.8882 us 5.8962 us]
-  thrpt:  [2.0005 GiB/s 2.0032 GiB/s 2.0058 GiB/s]
+tl-lipsum.html/tl-lipsum.html                                                                               
+  time:   [817.68 ns 818.86 ns 820.06 ns]
+  thrpt:  [14.383 GiB/s 14.404 GiB/s 14.425 GiB/s]
+
+htmlparser-lipsum.html/htmlparser-lipsum.html                                                                              
+  time:   [790.50 us 792.06 us 793.64 us]
+  thrpt:  [15.219 MiB/s 15.249 MiB/s 15.279 MiB/s]
+
+rphtml-lipsum.html/rphtml-lipsum.html                                                                               
+  time:   [51.358 us 51.477 us 51.614 us]
+  thrpt:  [234.01 MiB/s 234.64 MiB/s 235.18 MiB/s]
   
-htmlparser-lipsum.html/htmlparser-lipsum.html
-  time:   [788.46 us 789.96 us 791.48 us]
-  thrpt:  [15.260 MiB/s 15.290 MiB/s 15.319 MiB/s]
+rusthtml-lipsum.html/rusthtml-lipsum.html                                                                               
+  time:   [49.879 us 49.957 us 50.037 us]
+  thrpt:  [241.39 MiB/s 241.77 MiB/s 242.15 MiB/s]
   
-rphtml-lipsum.html/rphtml-lipsum.html
-  time:   [49.346 us 49.425 us 49.505 us]
-  thrpt:  [243.98 MiB/s 244.38 MiB/s 244.77 MiB/s]
-  
-rusthtml-lipsum.html/rusthtml-lipsum.html
-  time:   [42.792 us 42.881 us 42.970 us]
-  thrpt:  [281.09 MiB/s 281.67 MiB/s 282.25 MiB/s]
-  
-htmlstream-lipsum.html/htmlstream-lipsum.html
-  time:   [15.926 us 15.954 us 15.982 us]
-  thrpt:  [755.76 MiB/s 757.09 MiB/s 758.40 MiB/s]
-  
+htmlstream-lipsum.html/htmlstream-lipsum.html                                                                               
+  time:   [24.062 us 24.138 us 24.222 us]
+  thrpt:  [498.65 MiB/s 500.38 MiB/s 501.96 MiB/s]  
 ```
