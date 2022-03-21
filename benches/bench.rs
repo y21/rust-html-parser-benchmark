@@ -1,4 +1,6 @@
 use criterion::*;
+use lol_html::HtmlRewriter;
+use lol_html::Settings;
 
 include!("html5ever.rs");
 
@@ -10,7 +12,7 @@ where
 
     let mut group = cr.benchmark_group(name);
     group.throughput(Throughput::Bytes(input.as_bytes().len() as u64));
-    group.significance_level(0.1).sample_size(20000);
+    group.significance_level(0.1).sample_size(10000);
     group.bench_function(name, |b| {
         b.iter(|| {
             code();
@@ -21,7 +23,7 @@ where
 
 pub fn criterion_benchmark(cr: &mut Criterion) {
     let files = std::fs::read_dir("data").unwrap();
-    
+
     for file in files {
         let file = file.unwrap().file_name();
         let file = file.to_str().unwrap();
@@ -38,20 +40,17 @@ pub fn criterion_benchmark(cr: &mut Criterion) {
             let _ = tl::parse(&input, tl::ParserOptions::default());
         });
 
-        register_benchmark(cr, &input, &format!("htmlparser-{}", file), || {
-            let _ = html_parser::Dom::parse(&input);
-        });
-
-        register_benchmark(cr, &input, &format!("rphtml-{}", file), || {
-            let _ = rphtml::parser::Doc::parse(&input, Default::default());
-        });
-
-        register_benchmark(cr, &input, &format!("rusthtml-{}", file), || {
-            let _ = rusthtml::ElementContent::parse(rusthtml::HtmlTag::parse(&input));
-        });
-
         register_benchmark(cr, &input, &format!("htmlstream-{}", file), || {
             let _ = htmlstream::tag_iter(&input).collect::<Vec<_>>();
+        });
+
+        register_benchmark(cr, &input, &format!("lol_html-{}", file), || {
+            let mut v = Vec::new();
+            let mut rewriter = HtmlRewriter::new(Settings::default(), |c: &[u8]| {
+                v.extend_from_slice(c);
+            });
+
+            let _ = rewriter.write(input.as_bytes());
         });
     }
 }
