@@ -8,7 +8,7 @@ edition = "2021"
 [dependencies]
 criterion = { version = "0.3", features = ["html_reports"] }
 htmlstream = "0.1.3"
-tl = { version = "0.7.4", features = ["simd"] }
+tl = { version = "0.7.7", features = ["simd"] }
 html5ever = "0.25.1"
 lol_html = "0.3.1"
 
